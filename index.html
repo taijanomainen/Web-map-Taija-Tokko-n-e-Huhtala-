@@ -177,7 +177,7 @@
 			maxZoom: 28,
 			attribution: '<a href="https://www.google.com/maps">© Google</a>'
 		});
-		map.addLayer(layer_OpenStreetMap_0, layer_Google_sat);
+		map.addLayer(layer_OpenStreetMap_0);
         function pop_TanzaniaNationalParks2016_1(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -213,7 +213,7 @@
 			});
 			layer.bindPopup(content, { maxHeight: 400 });
         }
-
+		map.addLayer(layer_OpenStreetMap_0);
         function style_TanzaniaNationalParks2016_1_0(feature) {
             switch(String(feature.properties['DESIG_ENG'])) {
                 case 'Conservation Area':
@@ -296,6 +296,7 @@
         map.createPane('pane_TanzaniaNationalParks2016_1');
         map.getPane('pane_TanzaniaNationalParks2016_1').style.zIndex = 401;
         map.getPane('pane_TanzaniaNationalParks2016_1').style['mix-blend-mode'] = 'normal';
+		map.getPane('pane_TanzaniaNationalParks2016_1').style.opacity = 0.7;
         var layer_TanzaniaNationalParks2016_1 = new L.geoJson(json_TanzaniaNationalParks2016_1, {
             attribution: '',
             interactive: true,
@@ -439,7 +440,7 @@
         map.addLayer(layer_TanzaniaForestReserves2020_2);
         var overlaysTree = [
             {label: '<b>Tanzania Forest Reserves 2020</b><br /><table><tr><td style="text-align: center;"><img src="legend/TanzaniaForestReserves2020_2_ForestPlantation0.png" /></td><td>Forest Plantation</td></tr><tr><td style="text-align: center;"><img src="legend/TanzaniaForestReserves2020_2_ForestReserve1.png" /></td><td>Forest Reserve</td></tr><tr><td style="text-align: center;"><img src="legend/TanzaniaForestReserves2020_2_NatureForestReserve2.png" /></td><td>Nature Forest Reserve</td></tr></table>', layer: layer_TanzaniaForestReserves2020_2},
-            {label: '<b>Tanzania National Parks 2016</b><br /><table><tr><td style="text-align: center;"><img src="legend/TanzaniaNationalParks2016_1_ConservationArea0.png" /></td><td>Conservation Area</td></tr><tr><td style="text-align: center;"><img src="legend/TanzaniaNationalParks2016_1_GameReserve1.png" /></td><td>Game Reserve</td></tr><tr><td style="text-align: center;"><img src="legend/TanzaniaNationalParks2016_1_NationalPark2.png" /></td><td>National Park</td></tr><tr><td style="text-align: center;"><img src="legend/TanzaniaNationalParks2016_1_Openarea3.png" /></td><td>Open area</td></tr><tr><td style="text-align: center;"><img src="legend/TanzaniaNationalParks2016_1_WildlifeManagementArea4.png" /></td><td>Wildlife Management Area</td></tr></table>', layer: layer_TanzaniaNationalParks2016_1},
+            {label: '<b>Tanzania National Parks 2016</b><br /><table><tr><td style="text-align: center;"><img src="legend/TanzaniaNationalParks2016_1_ConservationArea0.png" /></td><td>Conservation Area</td></tr><tr><td style="text-align: center;"><img src="legend/TanzaniaNationalParks2016_1_GameReserve1.png" /></td><td>Game Reserve</td></tr><tr><td style="text-align: center;"><img src="legend/TanzaniaNationalParks2016_1_NationalPark2.png" /></td><td>National Park</td></tr><tr><td style="text-align: center;"><img src="legend/TanzaniaNationalParks2016_1_Openarea3.png" /></td><td>Open area</td></tr><tr><td style="text-align: center;"><img src="legend/TanzaniaNationalParks2016_1_WildlifeManagementArea4.png" /></td><td>Wildlife Management Area</td></tr></table>', layer: layer_TanzaniaNationalParks2016_1}
             ]
 		var baseMaps = {
 			"OpenStreetMap": layer_OpenStreetMap_0,
